@@ -47,6 +47,7 @@ public class Calculator extends JFrame {
         // Add a new operation "Sub" for the subtraction of two integers as an (instance of a) Java
         // class (you have yet to write this class)
 
+
         // TODO
         // Add a new operation "Mul" for the multiplication of two integers as an anonymous class
 
