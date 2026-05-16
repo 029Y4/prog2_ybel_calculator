@@ -60,11 +60,21 @@ public class Calculator extends JFrame {
         // Add a new operation "Div" for the division of two integers as a lambda expression
         operations.put("Div", (int a, int b) -> a/b );
 
+
         operationSelector = new JComboBox<>();
         operations.forEach((key, value) -> operationSelector.addItem(key));
 
         // TODO
         // Replace the anonymous class with a lambda expression
+        operationSelector.addActionListener(
+            (ActionEvent e) -> {
+                try {
+                    result.setText("" + calculate());
+                } catch (NumberFormatException ex) {
+                    System.out.println("Invalid input.");
+                }
+            });
+        /*
         operationSelector.addActionListener(
                 new ActionListener() {
                     @Override
@@ -76,6 +86,7 @@ public class Calculator extends JFrame {
                         }
                     }
                 });
+        */
     }
 
     /**
